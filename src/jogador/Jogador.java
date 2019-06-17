@@ -1,7 +1,7 @@
 package jogador;
 
 import pessoa.Pessoa;
-// Salário do jogador vai depender da nota e o do treinador da experiência
+// SalÃ¡rio do jogador vai depender da nota e o do treinador da experiÃªncia
 public class Jogador extends Pessoa {
 	private int tempoDeContrato;
 	private double valor;
@@ -54,15 +54,15 @@ public class Jogador extends Pessoa {
 /*
 class Habilidades extends Jogador {
 	private int notaTotal;
-	private int finalizações;
+	private int finalizaÃ§Ãµes;
 	private int passes;
-	private int interceptações;
+	private int interceptaÃ§Ãµes;
 	
 	public Habilidades() {
 		this.notaTotal = 0;
-		this.finalizações = 0;
+		this.finalizaÃ§Ãµes = 0;
 		this.passes = 0;
-		this.interceptações = 0;
+		this.interceptaÃ§Ãµes = 0;
 	}
 	public int getNotaTotal() {
 		return this.notaTotal;
@@ -70,11 +70,11 @@ class Habilidades extends Jogador {
 	public void setNotaTotal (int nota) {
 		this.notaTotal = nota;
 	}
-	public int getFinalizações() {
-		return this.finalizações;
+	public int getFinalizaÃ§Ãµes() {
+		return this.finalizaÃ§Ãµes;
 	}
-	public void setFinalizações (int finalizações) {
-		this.finalizações = finalizações;
+	public void setFinalizaÃ§Ãµes (int finalizaÃ§Ãµes) {
+		this.finalizaÃ§Ãµes = finalizaÃ§Ãµes;
 	}
 	public int getPasses() {
 		return this.passes;
@@ -82,10 +82,10 @@ class Habilidades extends Jogador {
 	public void setPasses (int passes) {
 		this.passes = passes;
 	}
-	public int getInterceptações() {
-		return this.interceptações;
+	public int getInterceptaÃ§Ãµes() {
+		return this.interceptaÃ§Ãµes;
 	}
-	public void setInterceptações (int interceptações) {
-		this.interceptações = interceptações;
+	public void setInterceptaÃ§Ãµes (int interceptaÃ§Ãµes) {
+		this.interceptaÃ§Ãµes = interceptaÃ§Ãµes;
 	}
 }*/

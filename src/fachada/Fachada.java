@@ -9,12 +9,16 @@ public class Fachada {
 	    private CadastroJogadores cadastroJogadores;
 	    //private CadastroHabilidades habilidades;
 
-	    public Fachada(RepositorioTime repositorioTime, RepositorioTreinadores repositorioTreinadores, RepositorioJogadores repositorioJogadores){
+	    public Fachada(RepositorioTimes repositorioTime, RepositorioTreinadores repositorioTreinadores, RepositorioJogadores repositorioJogadores){
 	        this.cadastroTimes = new CadastroTimes(repositorioTime);
 	        this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
 	        this.cadastroJogadores = new CadastroJogadores(repositorioJogadores);
 	        //this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
 	    }
+
+	    public Fachada (RepositorioTreinadores repositorioTreinadores){
+	    	this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
+		}
 
 	    //Malu (Time)
 	    public void cadastrarTime (Time time) throws TimeJaCadastradoException {
@@ -24,13 +28,13 @@ public class Fachada {
 	        cadastroTimes.remover(nome);
 	    }
 	    public  void atualizarTime (String nome, Time time) throws TimeNaoEncontradoException {
-	        cadastroTimes.atualizar(nome, time);
+	        cadastroTimes.atualizar(time);
 	    }
 	    public void procurarTime (String nome) throws TimeNaoEncontradoException {
 	        cadastroTimes.procurar(nome);
 	    }
-	    
-	  //Henrique (Treinador)
+
+	    //Henrique (Treinador)
 	    public void cadastrarTreinador (Treinador treinador) throws TreinadorJaCadastradoException {
 	        //Metodo exemplo, da aula 14
 	        cadastroTreinadores.cadastrar(treinador);
@@ -44,7 +48,8 @@ public class Fachada {
 	    public Treinador procurarTreinador (String registroFifa) throws TreinadorNaoEncontradoException {
 	        return cadastroTreinadores.procurar(registroFifa);
 	    }
-	  //Igor (Jogador)
+
+	    //Igor (Jogador)
 	    public void cadastrarJogador (Jogador jogador) throws JogadorJaCadastradoException, JogadorNaoEncontradoException {
 	    	cadastroJogadores.cadastrar(jogador);
 	    }
@@ -57,23 +62,6 @@ public class Fachada {
 	    public Jogador procurarJogador (String nome) throws JogadorNaoEncontradoException {
 	    	 return cadastroJogadores.procurar(nome);
 	    }
-	    /*
-	    public void comprarJogador (Time time, Jogador jogador) throws VerbaInsuficienteException{
-	        // double valorJogador = jogador.getValor();
-	         * double verbaTime = time.getVerba();
-	         * if (valorJogador < verbaTime){
-	         * 		remover jogador do time de origem
-	         * 		adicionar valor do jogador a verba do time de origem
-	         * 		time.setVerba(verbaTime-valorJogador);
-	         * } else {
-	         * 		throws new VerbaInsuficienteException();
-	         * }
-	        //Método principal do projeto
-	    }
-	    public void atualizarInformações (){
-	        //Método para atualizar idade, experiência, salário...
-	    }
-	    */
 
 	}
 

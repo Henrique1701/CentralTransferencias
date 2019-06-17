@@ -1,9 +1,9 @@
 package time;
 
 public class CadastroTimes {
-	private RepositorioTime times;
+	private RepositorioTimes times;
 	
-	public CadastroTimes (RepositorioTime rep) {
+	public CadastroTimes (RepositorioTimes rep) {
 		times = rep;
 	}
 
@@ -14,7 +14,15 @@ public class CadastroTimes {
 			throw new TimeJaCadastradoException();
 		}
 	}
-	
+
+	public void atualizar (Time time) throws TimeNaoEncontradoException {
+		if (times.existe(time.getNome())) {
+			times.atualizar(time);
+		} else {
+			throw new TimeNaoEncontradoException();
+		}
+	}
+
 	public void remover (String nome) throws TimeNaoEncontradoException {
 		if (times.existe(nome)) {
 			times.remover(nome);
@@ -22,15 +30,7 @@ public class CadastroTimes {
 			throw new TimeNaoEncontradoException();
 		}
 	}
-	
-	public void atualizar (String nome, Time time) throws TimeNaoEncontradoException {
-		if (times.existe(nome)) {
-			times.atualizar(nome, time);
-		} else {
-			throw new TimeNaoEncontradoException();
-		}
-	}
-	
+
 	public Time procurar (String nome) throws TimeNaoEncontradoException {
 		if (times.existe(nome)) {
 			return times.procurar(nome);

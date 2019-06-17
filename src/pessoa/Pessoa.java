@@ -5,10 +5,8 @@ public abstract class Pessoa {
     private int idade;
     private double salario;
 
-    public Pessoa (){
-        this.nome = "";
-        this.idade = 0;
-        this.salario = 0;
+    public Pessoa(){
+
     }
 
     public Pessoa (String nome, int idade, double salario){

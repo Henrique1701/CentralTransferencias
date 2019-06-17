@@ -38,15 +38,4 @@ public class CadastroTreinadores {
             throw new TreinadorNaoEncontradoException();
         }
     }
-
-    /*
-    public void atualizaExperiencia(String registroFifa, int anoTemporada, int quantidaContratos){
-        //Desenvolver alguma formula para alterar a experiencia dos treinadores
-        //Em relação ao ano/temporada atual.
-        Treinador treinadorAux = repositorioTreinadores.procurar(registroFifa);
-        double experienciaAux = treinadorAux.getExperiencia() + (quantidaContratos / 5 * anoTemporada);
-        treinadorAux.setExperiencia(experienciaAux);
-        repositorioTreinadores.atualizar(treinadorAux);
-    }
-    */
 }
