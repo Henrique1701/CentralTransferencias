@@ -1,0 +1,10 @@
+package Habilidade;
+
+public class HabilidadesJaCadastradoException extends Exception {
+	
+	      public HabilidadesJaCadastradoException() {
+	    	  
+	    	  super("Treinador já cadastrado");
+	      }
+	    }
+	
