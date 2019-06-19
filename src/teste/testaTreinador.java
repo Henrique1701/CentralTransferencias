@@ -1,13 +1,14 @@
 package teste;
 
-import fachada.Fachada;
+import fachada.CentralTransferencias;
 import treinador.*;
 
 public class testaTreinador {
     public static void main(String[] args) {
         //Provavelmente terei que forçar erros para verificar as exceções...
-        RepositorioTreinadores repositorioTreinadores = new RepositorioTreinadorArray(10);
-        Fachada fachada = new Fachada(repositorioTreinadores);
+        //RepositorioTreinadores repositorioTreinadores = new RepositorioTreinadoresArray(10);
+        RepositorioTreinadores repositorioTreinadores = new RepositorioTreinadoresLista();
+        CentralTransferencias fachada = new CentralTransferencias(repositorioTreinadores);
 
         //Cadastra treinadores:
         try { //Treinador do Real Madrid
@@ -98,6 +99,7 @@ public class testaTreinador {
 
         //Atualizar Treinadores:
         System.out.println("Atualiza treinadores");
+        System.out.println();
         try { //Zidane:
             Treinador treinadorAux = fachada.procurarTreinador("01-Z");
             treinadorAux.setSalario(5000);
@@ -126,8 +128,8 @@ public class testaTreinador {
         }
 
         //Remover Treinador:
-        System.out.println("Vou remover o jogador Zidane (01-Z)");
-        System.out.println("Depois vou tentar procurar por ele na lista");
+        //System.out.println("Vou remover o jogador Zidane (01-Z)");
+        //System.out.println("Depois vou tentar procurar por ele na lista");
         System.out.println("Como o jogador não ira mais existir vai mandar uma exceção:");
         System.out.println();
         try {

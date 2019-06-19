@@ -1,10 +1,10 @@
 package treinador;
 
-public class RepositorioTreinadorLista implements RepositorioTreinadores{
+public class RepositorioTreinadoresLista implements RepositorioTreinadores{
     private Treinador treinador;
-    private RepositorioTreinadorLista proximo;
+    private RepositorioTreinadoresLista proximo;
 
-    public RepositorioTreinadorLista(){
+    public RepositorioTreinadoresLista(){
         this.treinador = null;
         this.proximo = null;
     }
@@ -12,12 +12,15 @@ public class RepositorioTreinadorLista implements RepositorioTreinadores{
     @Override
     public void inserir(Treinador treinador) {
         if(this.proximo == null){
+            this.treinador = treinador;
+            /*
             this.treinador.setNome(treinador.getNome());
             this.treinador.setIdade(treinador.getIdade());
             this.treinador.setSalario(treinador.getSalario());
             this.treinador.setRegistroFifa(treinador.getRegistroFifa());
             this.treinador.setExperiencia(treinador.getExperiencia());
-            this.proximo = new RepositorioTreinadorLista();
+            */
+            this.proximo = new RepositorioTreinadoresLista();
         } else {
             this.proximo.inserir(treinador);
         }

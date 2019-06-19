@@ -1,10 +1,10 @@
 package treinador;
 
-public class RepositorioTreinadorArray implements RepositorioTreinadores{
+public class RepositorioTreinadoresArray implements RepositorioTreinadores{
     private Treinador[] treinador;
     private int indice;
 
-    public RepositorioTreinadorArray(int tamanho){
+    public RepositorioTreinadoresArray(int tamanho){
         this.treinador = new Treinador[tamanho];
         indice = 0;
     }

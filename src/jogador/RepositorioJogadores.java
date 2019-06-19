@@ -12,6 +12,5 @@ public interface RepositorioJogadores {
 	public Jogador procurar (String nome)
 		throws JogadorNaoEncontradoException;
 	
-	public boolean existe (String nome)
-		throws JogadorNaoEncontradoException;
+	public boolean existe (String nome);
 }

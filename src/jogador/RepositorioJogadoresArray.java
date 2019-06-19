@@ -4,8 +4,8 @@ public class RepositorioJogadoresArray implements RepositorioJogadores{
 	private Jogador [] jogador = new Jogador [100];
 	private int indice = 0;
 
-	public RepositorioJogadoresArray (String nome) {
-		//this.jogador [0] = null;
+	public RepositorioJogadoresArray () {
+		this.jogador = null;
 	}
 
 	public Jogador [] getJogadores() {

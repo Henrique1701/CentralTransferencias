@@ -5,15 +5,13 @@ import pessoa.Pessoa;
 public class Jogador extends Pessoa {
 	private int tempoDeContrato;
 	private double valor;
-	private Pessoa pessoa;
 	private double nota;
 
-	public Jogador() {
-		super ();
-		this.tempoDeContrato = 0;
-		this.valor = 0;
-		this.setPessoa(null);
-		this.nota = 0;
+	public Jogador(String nome, int idade, double salario, int tempoDeContrato, double valor, double nota) {
+		super (nome, idade, salario);
+		this.tempoDeContrato = tempoDeContrato;
+		this.valor = valor;
+		this.nota = nota;
 	}
 	public int getTempoDeContrato() {
 		return this.tempoDeContrato;
@@ -27,42 +25,42 @@ public class Jogador extends Pessoa {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-/*	public Habilidades getHabilidades() {
-		return habilidades;
-	}
-	public void setHabilidades(Habilidades habilidades) {
-		this.habilidades = habilidades;
-	}*/
-	public Pessoa getPessoa() {
+	/*	public Habilidades getHabilidades() {
+            return habilidades;
+        }
+        public void setHabilidades(Habilidades habilidades) {
+            this.habilidades = habilidades;
+        }*/
+/*	public Pessoa getPessoa() {
 		return pessoa;
 	}
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
-	}
+	}*/
 	public double getNota() {
 		return nota;
 	}
 	public void setNota(double nota) {
 		this.nota = nota;
 	}
-	
+
 	public void calculaSalario() {
-		super.setSalario(super.getSalario() + nota*10);  
+		super.setSalario(super.getSalario() + nota*10);
 	}
 
 }
 /*
 class Habilidades extends Jogador {
 	private int notaTotal;
-	private int finalizações;
+	private int finalizaÃ§Ãµes;
 	private int passes;
-	private int interceptações;
-	
+	private int interceptaÃ§Ãµes;
+
 	public Habilidades() {
 		this.notaTotal = 0;
-		this.finalizações = 0;
+		this.finalizaÃ§Ãµes = 0;
 		this.passes = 0;
-		this.interceptações = 0;
+		this.interceptaÃ§Ãµes = 0;
 	}
 	public int getNotaTotal() {
 		return this.notaTotal;
@@ -70,11 +68,11 @@ class Habilidades extends Jogador {
 	public void setNotaTotal (int nota) {
 		this.notaTotal = nota;
 	}
-	public int getFinalizações() {
-		return this.finalizações;
+	public int getFinalizaÃ§Ãµes() {
+		return this.finalizaÃ§Ãµes;
 	}
-	public void setFinalizações (int finalizações) {
-		this.finalizações = finalizações;
+	public void setFinalizaÃ§Ãµes (int finalizaÃ§Ãµes) {
+		this.finalizaÃ§Ãµes = finalizaÃ§Ãµes;
 	}
 	public int getPasses() {
 		return this.passes;
@@ -82,10 +80,10 @@ class Habilidades extends Jogador {
 	public void setPasses (int passes) {
 		this.passes = passes;
 	}
-	public int getInterceptações() {
-		return this.interceptações;
+	public int getInterceptaÃ§Ãµes() {
+		return this.interceptaÃ§Ãµes;
 	}
-	public void setInterceptações (int interceptações) {
-		this.interceptações = interceptações;
+	public void setInterceptaÃ§Ãµes (int interceptaÃ§Ãµes) {
+		this.interceptaÃ§Ãµes = interceptaÃ§Ãµes;
 	}
 }*/

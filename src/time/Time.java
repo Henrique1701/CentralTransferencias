@@ -9,7 +9,7 @@ public class Time {
 	private String nome;
 	private double verbaTotal;
 	private RepositorioJogadores jogadores;
-	private RepositorioTreinadores treinador;
+	private Treinador treinador;
 	
 	public Time () {
 		this.nome = null;
@@ -19,14 +19,21 @@ public class Time {
 	}
 
 	//Pergunta a Malu, com a gente vai usar esse construtor
-	/*
-	public Time (String nome, double verba, RepositorioJogadores[] jogadores, Treinador treinador) {
+
+	public Time (String nome, double verba, RepositorioJogadores jogadores, Treinador treinador) {
 		this.nome = nome;
 		this.verbaTotal = verba;
 		this.jogadores = jogadores;
 		this.treinador = treinador;
 	}
-	*/
+
+	public Time (String nome, double verba, Treinador treinador) {
+		this.nome = nome;
+		this.verbaTotal = verba;
+		//this.jogadores = jogadores;
+		this.treinador = treinador;
+	}
+
 	
 	public String getNome () {
 		return nome;

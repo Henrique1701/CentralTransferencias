@@ -3,20 +3,20 @@ import treinador.*;
 import jogador.*;
 import time.*;
 
-public class Fachada {
+public class CentralTransferencias {
 		private CadastroTimes cadastroTimes;
 	    private CadastroTreinadores cadastroTreinadores;
 	    private CadastroJogadores cadastroJogadores;
 	    //private CadastroHabilidades habilidades;
 
-	    public Fachada(RepositorioTimes repositorioTime, RepositorioTreinadores repositorioTreinadores, RepositorioJogadores repositorioJogadores){
+	    public CentralTransferencias(RepositorioTimes repositorioTime, RepositorioTreinadores repositorioTreinadores, RepositorioJogadores repositorioJogadores){
 	        this.cadastroTimes = new CadastroTimes(repositorioTime);
 	        this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
 	        this.cadastroJogadores = new CadastroJogadores(repositorioJogadores);
 	        //this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
 	    }
 
-	    public Fachada (RepositorioTreinadores repositorioTreinadores){
+	    public CentralTransferencias(RepositorioTreinadores repositorioTreinadores){
 	    	this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
 		}
 
