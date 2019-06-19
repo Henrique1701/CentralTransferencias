@@ -1,8 +1,8 @@
-package Habilidade;
+package habilidade;
 
 import jogador.Jogador;
 
-public class Habilidade extends Jogador {
+public class Habilidade {
 	
 	private String nomeJogador;
 	private double notaTotal;
@@ -10,7 +10,7 @@ public class Habilidade extends Jogador {
 	private int passe;
 	private int interceptacao;
 	
-	public Habilidade (int finalizacao, int passe, int interceptacao) {				
+	public Habilidade (int finalizacao, int passe, int interceptacao) {
 		this.nomeJogador = "";
 		this.notaTotal = 0;	
 	}

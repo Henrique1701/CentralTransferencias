@@ -29,7 +29,7 @@ public class RepositorioJogadoresLista implements RepositorioJogadores {
 		}
 	}
 
-	public void atualizar(Jogador jogador) throws JogadorNaoEncontradoException {
+	public void atualizar(Jogador jogador) {
 		if (this.jogador.getNome().equals(jogador.getNome())) {
 			this.jogador.setIdade(jogador.getIdade());
 			this.jogador.setTempoDeContrato(jogador.getTempoDeContrato());
@@ -41,7 +41,7 @@ public class RepositorioJogadoresLista implements RepositorioJogadores {
 		}
 	}
 
-	public void remover(String nome) throws JogadorNaoEncontradoException {
+	public void remover(String nome) {
 		if (this.jogador.getNome().equals(nome)) {
 			this.jogador = this.proximo.jogador;
 			this.proximo = this.proximo.proximo;
@@ -58,7 +58,7 @@ public class RepositorioJogadoresLista implements RepositorioJogadores {
 		}
 	}
 
-	public boolean existe(String nome) throws JogadorNaoEncontradoException {
+	public boolean existe(String nome) {
 		if (this.proximo == null) {
 			if (this.jogador.getNome().equals(nome)) {
 				return true;

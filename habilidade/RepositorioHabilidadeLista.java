@@ -1,4 +1,4 @@
-package Habilidade;
+package habilidade;
 
 public class RepositorioHabilidadeLista implements RepositorioHabilidades {
 	    private Habilidade habilidade;

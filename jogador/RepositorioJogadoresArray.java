@@ -20,12 +20,6 @@ public class RepositorioJogadoresArray implements RepositorioJogadores{
 	public void inserir (Jogador jogador) {
 		if (indice < this.jogador.length) {
 			this.jogador [this.indice] = jogador;
-			/*.setNome(jogador.getNome());
-			this.jogador [indice].setSalario(jogador.getSalario());
-			this.jogador [indice].setIdade(jogador.getIdade());
-			this.jogador [indice].setTempoDeContrato(jogador.getTempoDeContrato());
-			this.jogador [indice].setValor(jogador.getValor());
-			this.jogador [indice].setNota(jogador.getNota());*/
 			indice++;
 		} else {
 			Jogador [] aux = new Jogador [(this.jogador.length + 1)*2];
@@ -34,17 +28,11 @@ public class RepositorioJogadoresArray implements RepositorioJogadores{
 			}
 			this.jogador = aux;
 			this.jogador [this.indice] = jogador;
-			/*.setNome(jogador.getNome());
-			this.jogador [indice].setSalario(jogador.getSalario());
-			this.jogador [indice].setIdade(jogador.getIdade());
-			this.jogador [indice].setTempoDeContrato(jogador.getTempoDeContrato());
-			this.jogador [indice].setValor(jogador.getValor());
-			this.jogador [indice].setNota(jogador.getNota());*/
 			indice++;
 		}
 	}
 
-	public void atualizar(Jogador jogador) throws JogadorNaoEncontradoException {
+	public void atualizar(Jogador jogador) {
 		for (int c = 0; c < this.jogador.length; c++) {
 			if (this.jogador[c].getNome().equals(jogador.getNome())) {
 				this.jogador[c].setNome(jogador.getNome());
@@ -57,7 +45,7 @@ public class RepositorioJogadoresArray implements RepositorioJogadores{
 		}
 	}
 
-	public void remover(String nome) throws JogadorNaoEncontradoException {
+	public void remover(String nome) {
 		for (int c = 0; c < this.jogador.length; c++) {
 			if (this.jogador[c].getNome().equals(nome)) {
 				indice--;
@@ -66,7 +54,7 @@ public class RepositorioJogadoresArray implements RepositorioJogadores{
 		}
 	}
 
-	public Jogador procurar(String nome) throws JogadorNaoEncontradoException {
+	public Jogador procurar(String nome) {
 		for (int c = 0; c < this.jogador.length; c++) {
 			if (this.jogador[c].getNome().equals(nome)) {
 				return this.jogador[c];
@@ -75,7 +63,7 @@ public class RepositorioJogadoresArray implements RepositorioJogadores{
 		return this.jogador[indice];
 	}
 
-	public boolean existe(String nome) throws JogadorNaoEncontradoException {
+	public boolean existe(String nome) {
 		int indiceAux = getIndice();
 		if (indiceAux != 0) {
 			for (int c = 0; c < indiceAux; c++) {

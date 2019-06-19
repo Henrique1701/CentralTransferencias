@@ -11,8 +11,8 @@ public class Programa {
         //RepositorioTimes repositorioTimes = new RepositorioTimesLista();
         RepositorioTimes repositorioTimes = new RepositorioTimesArray(100);
         //RepositorioJogadores repositorioJogadores = new RepositorioJogadoresLista();
-        RepositorioJogadores repositorioJogadores = new RepositorioJogadoresArray();
-        RepositorioTreinadores repositorioTreinadores = new RepositorioTreinadoresArray(10);
+        RepositorioJogadores repositorioJogadores = new RepositorioJogadoresArray(100);
+        RepositorioTreinadores repositorioTreinadores = new RepositorioTreinadoresArray(100);
         //RepositorioTreinadores repositorioTreinadores = new RepositorioTreinadoresLista();
         RepositorioHabilidades repositorioHabilidades = new RepositorioHabilidadesLista();
 
@@ -150,15 +150,19 @@ public class Programa {
 
         //Cadastra Times:
         // Real Madrid
+        RepositorioJogadores jogadoresReal = new RepositorioJogadoresArray(50);
         Treinador zidane = new Treinador("Zidane", 46, 10000, "01-Z", 50);
-        Jogador Messi = new Jogador("Messi", 31, 100000, 3, 1500000, 90);
-        Time realMadrid = new Time("Real Madrid", 398743, zidane);
+        Jogador messi = new Jogador("Messi", 31, 100000, 3, 1500000, 90);
+        Jogador neymar = new Jogador("Neymar", 27, 80000, 4, 900000, 87);
+        jogadoresReal.inserir(messi);
+        jogadoresReal.inserir(neymar);
+        Time realMadrid = new Time("Real Madrid", 398743,jogadoresReal, zidane);
         try {
-            fachada.cadastrarJogador(Messi);
             fachada.cadastrarTime(realMadrid);
         }catch (TimeJaCadastradoException e){
             System.out.println(e.getMessage());
         }
+
 
         Treinador ernesto = new Treinador("Ernesto", 55, 9000, "02-E", 40);
         Time barcelona = new Time("barcelona", 412412, ernesto);

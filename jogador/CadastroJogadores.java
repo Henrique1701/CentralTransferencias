@@ -6,7 +6,7 @@ public class CadastroJogadores {
 	public CadastroJogadores (RepositorioJogadores repositorio) {
 		this.repositorioJogadores = repositorio;
 	}
-	public void cadastrar(Jogador jogador) throws JogadorJaCadastradoException, JogadorNaoEncontradoException {
+	public void cadastrar(Jogador jogador) throws JogadorJaCadastradoException{
 		if (this.repositorioJogadores.existe(jogador.getNome()) == false) {
 			this.repositorioJogadores.inserir(jogador);
 		} else {
