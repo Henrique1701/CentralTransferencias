@@ -25,12 +25,12 @@ public class Jogador extends Pessoa {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	/*	public Habilidades getHabilidades() {
-            return habilidades;
-        }
-        public void setHabilidades(Habilidades habilidades) {
-            this.habilidades = habilidades;
-        }*/
+/*	public Habilidades getHabilidades() {
+		return habilidades;
+	}
+	public void setHabilidades(Habilidades habilidades) {
+		this.habilidades = habilidades;
+	}*/
 /*	public Pessoa getPessoa() {
 		return pessoa;
 	}
@@ -43,9 +43,9 @@ public class Jogador extends Pessoa {
 	public void setNota(double nota) {
 		this.nota = nota;
 	}
-
+	
 	public void calculaSalario() {
-		super.setSalario(super.getSalario() + nota*10);
+		super.setSalario(super.getSalario() + nota*10);  
 	}
 
 }
@@ -55,7 +55,7 @@ class Habilidades extends Jogador {
 	private int finalizaÃ§Ãµes;
 	private int passes;
 	private int interceptaÃ§Ãµes;
-
+	
 	public Habilidades() {
 		this.notaTotal = 0;
 		this.finalizaÃ§Ãµes = 0;
