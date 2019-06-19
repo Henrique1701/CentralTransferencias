@@ -15,9 +15,12 @@ public class Fachada {
 	        this.cadastroJogadores = new CadastroJogadores(repositorioJogadores);
 	        //this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
 	    }
-
 	    public Fachada (RepositorioTreinadores repositorioTreinadores){
 	    	this.cadastroTreinadores = new CadastroTreinadores(repositorioTreinadores);
+		}
+
+	    public Fachada (RepositorioJogadores repositorioJogadores){
+	    	this.cadastroJogadores = new CadastroJogadores(repositorioJogadores);
 		}
 
 	    //Malu (Time)
