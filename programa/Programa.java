@@ -107,7 +107,7 @@ public class Programa {
         }
 
         //Atualizar Treinadores:
-        System.out.println("Atualiza treinadores");
+        System.out.println("=== Atualiza treinadores ===");
         System.out.println();
         try { //Zidane:
             Treinador treinadorAux = fachada.procurarTreinador("01-Z");
@@ -140,7 +140,7 @@ public class Programa {
         //System.out.println("Vou remover o jogador Zidane (01-Z)");
         //System.out.println("Depois vou tentar procurar por ele na lista");
         System.out.println("Como o jogador não ira mais existir vai mandar uma exceção:");
-        System.out.println();
+
         try {
             fachada.removerTreinador("01-Z");
             Treinador treinadorAux = fachada.procurarTreinador("01-Z");
@@ -152,10 +152,10 @@ public class Programa {
         // Real Madrid
         RepositorioJogadores jogadoresReal = new RepositorioJogadoresArray(50);
         Treinador zidane = new Treinador("Zidane", 46, 10000, "01-Z", 50);
-        Jogador messi = new Jogador("Messi", 31, 100000, 3, 1500000, 90);
-        Jogador neymar = new Jogador("Neymar", 27, 80000, 4, 900000, 87);
-        jogadoresReal.inserir(messi);
-        jogadoresReal.inserir(neymar);
+        Jogador cristiano = new Jogador("Cristiano Ronaldo", 35, 100000, 4, 1500000, 92);
+        Jogador marcelo = new Jogador("Marcelo", 31, 90000, 3, 900000, 87);
+        jogadoresReal.inserir(cristiano);
+        jogadoresReal.inserir(marcelo);
         Time realMadrid = new Time("Real Madrid", 398743,jogadoresReal, zidane);
         try {
             fachada.cadastrarTime(realMadrid);
@@ -163,9 +163,14 @@ public class Programa {
             System.out.println(e.getMessage());
         }
 
-
+        //Barcelona
+        RepositorioJogadores jogadoresBarcelona = new RepositorioJogadoresArray(50);
         Treinador ernesto = new Treinador("Ernesto", 55, 9000, "02-E", 40);
-        Time barcelona = new Time("barcelona", 412412, ernesto);
+        Jogador messi = new Jogador("Messi", 31, 100000, 3, 1500000, 90);
+        Jogador neymar = new Jogador("Neymar", 27, 80000, 4, 900000, 87);
+        jogadoresBarcelona.inserir(messi);
+        jogadoresBarcelona.inserir(neymar);
+        Time barcelona = new Time("barcelona", 412412, jogadoresBarcelona, ernesto);
         try {
             fachada.cadastrarTime(barcelona);
         }catch (TimeJaCadastradoException e){
